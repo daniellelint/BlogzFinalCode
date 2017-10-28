@@ -227,8 +227,7 @@ def validate_submit_new_entry():
             db.session.add(new_entry)
             db.session.commit()
             query_post = "/blog?user=" + str(new_entry.id)
-            return render_template('singleentry.html',tab_title="Most Recent Entry (post)", 
-                                    heading=heading,content=content,author=author)
+            return redirect(query_post)
 
     else:
         if request.method == 'GET':

@@ -226,7 +226,7 @@ def validate_submit_new_entry():
             new_entry = Blog(heading,content,author)
             db.session.add(new_entry)
             db.session.commit()
-            query_post = "/blog?user=" + str(new_entry.id)
+            query_post = "/blog?id=" + str(new_entry.id)
             return redirect(query_post)
 
     else:

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>{{tab_title}}</title>
+        <style>
+            .link{
+                color:#000;
+                text-decoration:none;
+                padding:2px;}
+            .notify{
+                font-size:16px;}
+            .restrict_length{
+                width:50%;}
+            .error{color:red;}
+            .left{
+                float:left;
+                margin-left:2%;}
+            .right{
+                float:right;
+                margin-right:2%;}
+            .clear{clear:both;}
+            .small_print{font-size:10px;}
+        </style>
+
+    </head>
+
+    <header>
+        <div class="left">
+            <a href="/" class="link">Home Page | </a>
+            <a href="/blog" class="link">View all Entries | </a>
+            <a href="/new_entry" class="link">New Entry | </a>
+        </div>
+        <div class="right">
+            <a href="/login" class="link">Log-in | </a>
+            <a href="/logout" class="link">Log-out</a>
+        </div>
+    </header>
+
+    <br>
+    <hr class="clear"/>
+
+    <body>
+        
+        {% block body %}
+        {% endblock %}
+
+    </body>
+
+</html>
